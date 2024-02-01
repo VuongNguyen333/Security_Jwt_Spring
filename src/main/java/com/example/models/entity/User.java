@@ -22,8 +22,9 @@ import java.util.List;
 @AllArgsConstructor
 public class User implements UserDetails {
    @Id
-   @GeneratedValue (strategy = GenerationType.IDENTITY)
+   @GeneratedValue(strategy = GenerationType.IDENTITY)
    private Long id;
+
 
    private String firstname;
    private String lastname;
@@ -34,7 +35,6 @@ public class User implements UserDetails {
    @Column(nullable = false, unique = true)
    private String password;
 
-   @Column(nullable = false, unique = true)
    private String email;
 
    @JsonFormat(pattern = "dd/MM/yyyy")

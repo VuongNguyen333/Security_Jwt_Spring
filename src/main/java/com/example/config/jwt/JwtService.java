@@ -20,6 +20,7 @@ public class JwtService {
    @Value("${com.example.config.jwt.secret}")
    private String SECRET_KEY;
    private static final long EXPIRE_TIME = 86400000000L;
+
    public String extractUsername(String token) {
       return extractClaim(token, Claims::getSubject);
    }
